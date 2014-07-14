@@ -7,6 +7,8 @@
             <h3>Время приготовления: {{dishTime}} мин.</h3>
             <p>Описание для клиентов: {{dishAbout}}</p>
             <p>Brief описание: {{dishBrief}}</p>
+            <p>Цена: {{dishPrice}}</p>
+            <p>Вес: {{dishWeight}}</p>
             <h4>Фотографии блюда для клиентов: </h4>
             <div class="picsFromDB" ng-repeat="pic in dishPhoto">
                 <img src="/uploaded/{{pic}}">
@@ -38,6 +40,18 @@
             <label for="inputTime" class="col-sm-2 control-label">Время на приготовение</label>
             <div class="col-sm-10">
                 <input type="text" class="form-control" id="inputTime" placeholder="Время на приготовление" ng-model="time">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="inputPrice" class="col-sm-2 control-label">Стоимость(тенге)</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="inputPrice" placeholder="Стоимость блюда" ng-model="price">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="inputWeight" class="col-sm-2 control-label">Вес(гр)</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="inputWeight" placeholder="Вес блюда" ng-model="weight">
             </div>
         </div>
         <div class="form-group">

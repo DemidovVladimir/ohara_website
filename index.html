@@ -1,6 +1,8 @@
 <!doctype html>
 <html ng-app="myApp">
 <head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>First Page Render</title>
 <link href="lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
 <link href='http://fonts.googleapis.com/css?family=Lobster&subset=cyrillic-ext,latin' rel='stylesheet' type='text/css'>
@@ -229,11 +231,11 @@ ul.nav a:hover{color:limegreen !important; }
 .controlsMenu button{
     border-style: none;
     background-color:rgba(255,255,255,0);
-    color: rgba(102, 153, 26, 0.5);
+    color: rgba(102, 153, 51, 0.5);
     font-size: 300%;
 }
 .controlsMenu button:hover{
-    color: rgba(102, 153, 26, 1);
+    color: rgba(102, 153, 51, 1);
 }
 #myCarousel_7 .thumbnail{
     background-color: rgba(255,255,255,0);
@@ -364,9 +366,9 @@ ul.nav a:hover{color:limegreen !important; }
 .greenDots img{
     width:30px;
 }
-
-
-
+.secondDots img{
+    margin-top: 25px;
+}
 
 
 
@@ -422,14 +424,17 @@ ul.nav a:hover{color:limegreen !important; }
 #myCarousel_2 .img-thumbnail, #myCarousel_3 .img-thumbnail{
     box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.25);
 }
-.carousel-inner{
-    padding-bottom: 10px;
+#myCarousel_1 .carousel-inner{
+    padding-bottom: 0px;
+}
+#afterSlider{
+    margin-top: -20px;
 }
 
 
-
-
-
+.carousel-inner{
+    padding-bottom: 10px;
+}
 
 /*Третий слайдер*/
 #myCarousel_3{
@@ -439,11 +444,7 @@ ul.nav a:hover{color:limegreen !important; }
     display: none;
 }
 .minimizedThird .nextSlideThirdSlider a, .minimizedThird .prevSlideThirdSlider a{
-    color:  rgba(149, 193, 31, 0.5);
-}
-.minimizedThird .nextSlideThirdSlider a:hover, .minimizedThird .prevSlideThirdSlider a:hover{
-    text-decoration: none;
-    color:  rgba(149, 193, 31, 1);
+    display: none;
 }
 
 
@@ -465,7 +466,7 @@ ul.nav a:hover{color:limegreen !important; }
 }
 .contentFooter{
     background-color: rgb(29,29,27);
-    height:205px;
+    height:215px;
     overflow:hidden;
 }
 .contentFooter a{
@@ -690,6 +691,10 @@ address p{
     /*8й слайдер*/
     #myCarousel_8 .carousel-inner{
         margin-top: -40px;
+    }
+    .bear{
+        margin-top: 15px;
+        margin-right: 25px;
     }
 }
 
@@ -982,6 +987,7 @@ address p{
         background-color:  rgb(29,29,27);
         text-align: center;
     }
+
     /*Языки*/
     .languages{
         position: absolute;
@@ -997,6 +1003,17 @@ address p{
         color: white;
         float: right;
         margin-left: 5px;
+    }
+    .cont{
+        position: relative;
+        top:25px;
+    }
+    .cont p{
+        font-size: 80%;
+    }
+    .titleDate_2 h5{
+        position: relative;
+        left:-15px;
     }
     /*Статьи*/
     .homeThumbs .thumbnails .thumbnail img{
@@ -1101,6 +1118,9 @@ address p{
     .ourMenu p{
         margin-top:5px;
     }
+    .ourMenu{
+        margin-top: 10%;
+    }
     /*Слайдер на странице меню*/
     #myCarousel_4 .glyphicon-chevron-left{
         font-size: 150%;
@@ -1113,6 +1133,19 @@ address p{
     }
     .slider2 .thumbnail{
         margin-top: -250px;
+    }
+    /*Slider 3 minimized*/
+    .slider3 .thumbnail{
+        background-color: rgba(255,255,255,0.1);
+        text-align: center;
+    }
+    .slide{
+        margin-top: 15px;
+        padding-bottom: 20px;
+    }
+
+    .bear{
+        margin-top: 15px;
     }
 }
 
@@ -1184,12 +1217,265 @@ input[type='file'] {
     text-align: center;
 }
 
+/*Меню глава в каждом блюде*/
+.thirdMenu{
+    margin-top: 150px;
+}
+
+.greenHelvetica{
+    font-family: "HelveticaNeueCyr";
+    color: rgba(102, 153, 26, 1);
+}
+.greenHelveticaItalicBold{
+    font-family: "HelveticaNeueCyr";
+    color: rgba(102, 153, 26, 1);
+    font-weight: bold;
+    font-style: italic;
+}
+.greenBack{
+    background-color: rgba(102, 153, 26, 1);
+}
+.clearFloat{
+    clear: both;
+}
+.marginTop15{
+    margin-top: 15px;
+}
+.marginTop35{
+    margin-top: 35px;
+}
+.marginTop_35{
+    margin-top: -35px;
+}
+.softShadow{
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.25);
+}
+.floatLeft{
+    float: left;
+}
+.floatRight{
+    float:right;
+}
+.noBack{
+    background-color: rgba(255,255,255,0);
+}
+.noBorder{
+    border-style: none;
+}
+.thirdMenu{
+    margin-top: 0;
+}
+.alignCenter{
+    text-align: center;
+}
+.fontHelvetica{
+    font-family: HelveticaNeueCyr;
+}
+
+
+#myCarousel_10 .carousel-control{
+    display: none;
+}
+#myCarousel_10 .carousel-inner{
+    margin-left: 5%;
+}
+.titleDate{
+    margin-left: 20px;
+}
+.totalDate{
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.titleDate_2{
+    position: relative;
+    top:10px;
+    left:25px;
+}
+.justLine{
+    margin-top: 0;
+}
+.justLine2{
+    width:100%;
+}
+#myCarousel_10 .newsBrief{
+    padding-bottom: 20px;
+}
+.newsBrief{
+   position: relative;
+   top:20px;
+   left:20px;
+}
+.aboutTotal img{
+    margin-left: 0;
+}
+.aboutTotal{
+    padding-left: 0;
+}
+.totalDate{
+    font-family:Myriad Pro;
+    color: #ffffff;
+}
+.titleDate{
+    font-family: HelveticaNeueCyr;
+}
+.newsBrief p{
+    font-family: "K_Myriad Pro";
+}
+.newsBrief a{
+    font-family: "k_myriad pro";
+    font-style: italic;
+}
+.k_myriad_italic{
+    font-family: "k_myriad pro";
+    font-style: italic;
+}
+.newsPhoto{
+    padding-left: 0;
+}
+#myCarousel_11 .carousel-control{
+    display: none;
+}
+.angular-google-map-container {
+    height: 400px;
+}
+.mapThumb{
+    margin-top:50px;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.25);
+}
+ .firstMenu .fa-chevron-circle-left{
+     color:rgba(102, 153, 26, 0.5);
+     background-color: rgba(255,255,255,0);
+     border-style: none;
+ }
+.firstMenu .fa-chevron-circle-left:hover{
+    color:rgba(102, 153, 26, 1);
+    background-color: rgba(255,255,255,0);
+    border-style: none;
+}
+.firstMenu .fa-chevron-circle-right{
+    color:rgba(102, 153, 26, 0.5);
+    background-color: rgba(255,255,255,0);
+    border-style: none;
+}
+.firstMenu .fa-chevron-circle-right:hover{
+    color:rgba(102, 153, 26, 1);
+    background-color: rgba(255,255,255,0);
+    border-style: none;
+}
+.eventsSlide .fa-chevron-circle-left{
+    color:rgba(102, 153, 26, 0.5);
+    background-color: rgba(255,255,255,0);
+    border-style: none;
+}
+.eventsSlide .fa-chevron-circle-left:hover{
+    color:rgba(102, 153, 26, 1);
+    background-color: rgba(255,255,255,0);
+    border-style: none;
+}
+.eventsSlide .fa-chevron-circle-right{
+    color:rgba(102, 153, 26, 0.5);
+    background-color: rgba(255,255,255,0);
+    border-style: none;
+}
+.eventsSlide .fa-chevron-circle-right:hover{
+    color:rgba(102, 153, 26, 1);
+    background-color: rgba(255,255,255,0);
+    border-style: none;
+}
+.dropdown-menu{
+    background-color: rgba(29,29,27,1);
+    min-width: 10px;
+    padding:2px;
+    text-align: center;
+}
+.dropdown-menu li{
+    width:100%;
+}
+.dropdown-menu li a{
+    color: #ffffff;
+    font-size: 80%;
+}
+.dropdown-menu li a:hover{
+    background-color: rgba(29,29,27,0);
+}
+.navbar-inverse .navbar-nav>.open>a, .navbar-inverse .navbar-nav>.open>a:hover, .navbar-inverse .navbar-nav>.open>a:focus {
+    background-color: rgba(29,29,27,0.1);
+}
 
 
 
+.animate_1.ng-hide-add, .animate_1.ng-hide-remove {
+    -webkit-transition:all linear 0.5s;
+    -moz-transition:all linear 0.5s;
+    -o-transition:all linear 0.5s;
+    transition:all linear 0.5s;
+    display:block!important;
+}
+
+.animate_1.ng-hide-add.ng-hide-add-active,
+.animate_1.ng-hide-remove {
+    opacity:0;
+}
+
+.animate_1.ng-hide-add,
+.animate_1.ng-hide-remove.ng-hide-remove-active {
+    opacity:1;
+}
+
+.maintain_category{
+    margin-top: 150px;
+}
+#myCarousel_7 .caption h5{
+   color:rgba(102, 153, 26, 1);
+    font-family: 'HelveticaNeueCyr';
+}
+.bear{
+    font-family: 'HelveticaNeueCyr';
+}
+.dishHead{
+    color:rgba(102, 153, 26, 1);
+}
+.caption a{
+    font-style: normal;
+    color: #000000;
+}
+.caption a h3{
+    font-family: 'KosticSerif-Regular';
+    font-style: normal;
+}
+.caption a p{
+    font-family: 'K_Myriad Pro';
+    font-style: normal;
+}
+.caption .btn-info{
+    color:white;
+}
+.aboutUs pre{
+    background-color: rgba(255,255,255,0);
+    border-style: none;
+}
+.brewery pre{
+    background-color: rgba(255,255,255,0);
+    border-style: none;
+}
+.dishHeadLink a{
+    color:rgba(102, 153, 26, 1);
+    text-decoration: none;
+    font-family: 'K_Myriad Pro';
+}
+.delivery pre{
+    background-color:rgba(255,255,255,0);
+    border-style: none;
+    font-size: 120%;
+}
+.ui-loader{
+    display:none;
+}
 </style>
 <script type="text/javascript" src="lib/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript" src="lib/jqmobile/jquery.mobile-1.4.3.min.js"></script>
 <script type="text/javascript" src="lib/lightbox/js/lightbox.min.js"></script>
+<script type="text/javascript" src="lib/swipe/jquery.touchSwipe.min.js"></script>
 <script type="text/javascript" src="lib/bootstrap/dist/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="lib/angular/angular.js"></script>
 <script type="text/javascript" src="lib/angular-route/angular-route.min.js"></script>
@@ -1198,6 +1484,11 @@ input[type='file'] {
 <script type="text/javascript" src="js/app.js"></script>
 <script type="text/javascript" src="js/controller.js"></script>
 <script type="text/javascript" src="js/directives.js"></script>
+<script type="text/javascript" src='//maps.googleapis.com/maps/api/js?sensor=true'></script>
+<script type="text/javascript" src="lib/lodash/dist/lodash.min.js"></script>
+<script type="text/javascript" src="lib/angular-google-maps/dist/angular-google-maps.min.js"></script>
+<script type="text/javascript" src="lib/angular-animate/angular-animate.min.js"></script>
+<base href="/">
 </head>
 <body>
 
@@ -1214,27 +1505,38 @@ input[type='file'] {
                 </button>
             </div>
 
-            <div class="navbar-brand" href="#">
+            <div class="navbar-brand">
                 <div class="circle">
                     <div class="grad">
-                        <img src="img/logo.png">
+                        <a ng-href=""><img src="img/logo.png"></a>
                     </div>
                 </div>
             </div>
 
             <div class="collapse navbar-collapse navbar-nav navbar-left" id="navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-left">
-                    <li><a href="/">Домой</a></li>
-                    <li><a href="#">О нас</a></li>
-                    <li><a href="#/menu">Меню</a></li>
+                <ul class="nav navbar-nav navbar-left menuGroup">
+                    <li><a ng-href="/">Домой</a></li>
+                    <li><a ng-href="aboutUs">О нас</a></li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown">
+                            Меню <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a ng-href="/menu/bar">Бар</a></li>
+                            <li><a ng-href="/menu/food">Кухня</a></li>
+                            <!--<li><a href="#/menu/bear">Пивное</a></li>-->
+                            <li><a ng-href="/menu/launch">Ланч</a></li>
+                            <li><a ng-href="/menu/branch">Бранч</a></li>
+                        </ul>
+                    </li>
                 </ul>
             </div>
 
             <div class="collapse navbar-collapse navbar-nav navbar-right" id="navbar-collapse-2">
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#">Пивоварня</a></li>
-                    <li><a href="#">Галерея</a></li>
-                    <li><a href="#">Контакты</a></li>
+                    <li><a ng-href="brewery">Пивоварня</a></li>
+                    <li><a ng-href="events">Галерея</a></li>
+                    <li><a ng-href="contacts">Контакты</a></li>
                 </ul>
             </div>
             <!--Смена языков-->
@@ -1256,9 +1558,110 @@ input[type='file'] {
 </nav>
 
 
-
     <div ng-view></div>
 
 
+<!--Футер-->
+<footer class="navbar-static-bottom">
+    <div class="lineFooter">
+    </div>
+    <div class="contentFooter gradHorFooter">
+        <div class="container">
+            <div class="ourNavigation col-md-1 col-md-offset-1">
+                <a ng-href="">
+                    <h4>НАВИГАЦИЯ</h4>
+                </a>
+                <a ng-href="/" id="downHome">
+                    <h5>ДОМОЙ</h5>
+                </a>
+                <a ng-href="aboutUs">
+                    <h5>О НАС</h5>
+                </a>
+                <a ng-href="brewery">
+                    <h5>ПИВОВАРНЯ</h5>
+                </a>
+                <a ng-href="menu">
+                    <h5>МЕНЮ</h5>
+                </a>
+                <a ng-href="events">
+                    <h5>ГАЛЕРЕЯ</h5>
+                </a>
+                <a ng-href="contacts">
+                    <h5>КОНТАКТЫ</h5>
+                </a>
+            </div>
+            <div class="tableOrder col-md-4 col-sm-6 col-md-offset-2">
+                <a ng-href="delivery">
+                    <h4 class="center">ДОСТАВКА</h4>
+                </a>
+                    <pre>
+Мы осуществляем доставку блюд из основного меню, а так же Ланчи и Пиво, сваренного на пивоварне O'Hara Irish Pub & Brewery. Все, что Вам нужно для оформления заказа - снять трубку и позвонить, предварительно выбрав желаемое в разделе меню.  Доставка работает: вк-чт с 12:00 до 01:00
+пт-сб с 12:00 до 04:00
+                    </pre>
+                <div class="col-md-3 col-sm-3">
+                    <a ng-href="http://vk.com/oharairishpub">
+                        <i class="fa fa-vk fa-2x"></i>
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-3">
+                    <a ng-href="/#/contacts">
+                        <i class="fa fa-envelope fa-2x"></i>
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-3">
+                    <a ng-href="https://www.facebook.com/OharaIrishPubAndBrewery?ref=hl">
+                        <i class="fa fa-facebook fa-2x"></i>
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-3">
+                    <a ng-href="">
+                        <i class="fa fa-instagram fa-2x"></i>
+                    </a>
+                </div>
+            </div>
+            <address class="contacts col-md-3 col-sm-6 col-xs-12 col-md-offset-1">
+                <a>
+                    <h4 class="center">КОНТАКТЫ</h4>
+                </a>
+                <div class="row">
+                    <div class="col-md-3 col-sm-3 col-sm-offset-0 col-xs-3 col-xs-offset-1">
+                        <img src="img/marker.png" width="19px" class="img-responsive">
+                    </div>
+                    <div class="col-md-9 col-sm-9 col-xs-8">
+                        <p>
+                            Республика Казахстан Астана, 010000   Желтоксан 2/2 ЖК "Гранд Алатау"
+                        </p>
+                    </div>
+                </div>
+                <div class="row phone">
+                    <div class="col-md-3 col-sm-3 col-sm-offset-0 col-xs-3 col-xs-offset-1">
+                        <img ng-src="img/phone.png" width="12px" height="19px">
+                    </div>
+                    <div class="col-md-9 col-sm-9 col-xs-8">
+                        <p>
+                            8 (7172) 570 888
+                        </p>
+                    </div>
+                </div>
+                <div class="row cell_phone ">
+                    <div class="col-md-3 col-sm-3 col-sm-offset-0 col-xs-3 col-xs-offset-1">
+                        <img ng-src="img/cell_phone.png" width="8px" height="19px">
+                    </div>
+                    <div class="col-md-9 col-sm-9 col-xs-8">
+                        <p>
+                            8 707 570 888 38
+                        </p>
+                    </div>
+                </div>
+            </address>
+
+
+
+
+
+        </div>
+    </div>
+    <div class="lineBeneath"></div>
+</footer>
 </body>
 </html>

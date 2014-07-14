@@ -2,12 +2,41 @@
 
     <form class="form-horizontal" role="form" enctype="multipart/form-data">
         <div class="form-group">
+            <label for="inputTitle" class="col-sm-2 control-label">Название</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="inputTitle" placeholder="{{title}}" ng-model="title">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="inputAbout" class="col-sm-2 control-label">Описание</label>
+            <div class="col-sm-10">
+                <textarea class="form-control" id="inputAbout" placeholder="Описание" ng-model="about"></textarea>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="inputBrief" class="col-sm-2 control-label">Описание</label>
+            <div class="col-sm-10">
+                <textarea class="form-control" id="inputBrief" placeholder="Краткое описание" ng-model="brief"></textarea>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="inputDate" class="col-sm-2 control-label">Дата</label>
+            <div class="col-sm-10">
+                <textarea class="form-control" id="inputDate" placeholder="Дата проведения мероприятия" ng-model="dateOf"></textarea>
+            </div>
+        </div>
+        <div class="form-group">
             <div class="col-sm-offset-2 col-sm-10">
                 <div class="checkbox">
                     <label>
                         <input type="checkbox" id="inputFile">Вставить фото
                     </label>
                 </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+                <a class="btn btn-danger ifOutOfFile" ng-click="postDataOutOfFile()">Записать данные</a>
             </div>
         </div>
         <div class="form-group checkForInput">
@@ -87,17 +116,21 @@
         <div class="container">
             <table class="table table-hover">
                 <tr>
+                    <th>Название события</th>
+                    <th>Описание</th>
                     <th>Картинка</th>
                 </tr>
-                <tr ng-repeat="pic in incomings">
-                    <td class="col-xs-2"><img class="img-responsive" src="uploaded/{{pic.photo}}"></td>
-                    <td><a class="btn btn-danger btn-sm" ng-click="deleteTotalEvent(pic.photo)">Удалить событие</a></td>
+                <tr ng-repeat="income in incomings">
+                    <td><a href="{{path}}{{income.title}}"><h3>{{income.title}}</h3></a></td>
+                    <td>{{income.about}}</td>
+                    <td>{{income.time}}</td>
+                    <td data-ng-repeat="pic in income.photo" class="col-xs-2"><img class="img-responsive" src="uploaded/{{pic}}"></td>
+                    <td><a class="btn btn-danger btn-sm" ng-click="deleteTotalEvent(income.title)">Удалить новость</a></td>
                 </tr>
             </table>
         </div>
     </div>
 </div>
-
 
 <script type="text/javascript">
     $(document).ready(function(){

@@ -14,7 +14,7 @@
             </div>
         </div>
         <div class="form-group">
-            <label for="briefDish" class="col-sm-2 control-label">Описание</label>
+            <label for="briefDish" class="col-sm-2 control-label">Описание краткое</label>
             <div class="col-sm-10">
                 <textarea class="form-control" id="briefDish" placeholder="Краткое описание" ng-model="brief"></textarea>
             </div>
@@ -23,6 +23,108 @@
             <label for="inputTime" class="col-sm-2 control-label">Время на приготовение(мин)</label>
             <div class="col-sm-10">
                 <input type="text" class="form-control" id="inputTime" placeholder="Время на приготовление" ng-model="time">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="inputPrice" class="col-sm-2 control-label">Стоимость(тенге)</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="inputPrice" placeholder="{{price}}" ng-model="price">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="inputWeight" class="col-sm-2 control-label">Вес(гр)</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="inputWeight" placeholder="{{weight}}" ng-model="weight">
+            </div>
+        </div>
+        <div class="row col-xs-offset-2">
+            <h1>Тип блюда</h1>
+            <label class="radio-inline">
+                <input type="radio" name="dish_type" id="radio1" value="food" ng-model="dish_type"> Food
+            </label>
+            <label class="radio-inline">
+                <input type="radio" name="dish_type" id="radio2" value="drink" ng-model="dish_type"> Drink
+            </label>
+            <label class="radio-inline">
+                <input type="radio" name="dish_type" id="radio3" value="bear" ng-model="dish_type"> Bear
+            </label>
+            <label class="radio-inline">
+                <input type="radio" name="dish_type" id="radio4" value="launch" ng-model="dish_type"> Launch
+            </label>
+            <label class="radio-inline">
+                <input type="radio" name="dish_type" id="radio4" value="branch" ng-model="dish_type"> Branch
+            </label>
+        </div>
+        <div class="animate_1" ng-show="dish_type=='food'">
+            <div class="col-xs-offset-2">
+                <select ng-model="dish_category">
+                    <option value="хоспер">Хоспер</option>
+                    <option value="холодные закуски">Холодные закуски</option>
+                    <option value="салаты">Салаты</option>
+                    <option value="горячие закуски">Горячие закуски</option>
+                    <option value="супы">Супы</option>
+                    <option value="паста">Паста</option>
+                    <option value="блюда из птицы">Блюда из птицы</option>
+                    <option value="гарнир">Гарнир</option>
+                    <option value="рекомендации к пиву">Рекомендации к пиву</option>
+                </select>
+            </div>
+        </div>
+        <div class="animate_1" ng-show="dish_type=='bear'">
+            <div class="col-xs-offset-2">
+                <select ng-model="dish_category">
+                    <option value="пивное меню" selected>Пивное меню</option>
+                </select>
+            </div>
+        </div>
+        <div class="animate_1" ng-show="dish_type=='drink'">
+            <div class="col-xs-offset-2">
+                <select ng-model="dish_category">
+                    <option value="Vermouth. Bitter. Digestive.">Vermouth. Bitter. Digestive.</option>
+                    <option value="Brandy. Cognac.">Brandy. Cognac.</option>
+                    <option value="Calvados">Calvados</option>
+                    <option value="Bas Armagnac">Bas Armagnac</option>
+                    <option value="Irish whiskey">Irish whiskey</option>
+                    <option value="Single malt Scottish whisky">Single malt Scottish whisky</option>
+                    <option value="Blended Scottish whisky">Blended Scottish whisky</option>
+                    <option value="American Whiskey">American Whiskey</option>
+                    <option value="Japanese Whisky">Japanese Whisky</option>
+                    <option value="Japanese Malt">Japanese Malt</option>
+                    <option value="Polugar">Polugar</option>
+                    <option value="Vodka">Vodka</option>
+                    <option value="Tequila">Tequila</option>
+                    <option value="Gin">Gin</option>
+                    <option value="Rum">Rum</option>
+                    <option value="Liqueurs">Liqueurs</option>
+                    <option value="Mix Drink">Mix Drink</option>
+                    <option value="Shot drinks">Shot drinks</option>
+                    <option value="Classic cocktails">Classic cocktails</option>
+                    <option value="ПОПУЛЯРНЫЕ">ПОПУЛЯРНЫЕ</option>
+                    <option value="Wet pussy drinks">Wet pussy drinks</option>
+                    <option value="Non-Alcohol Cocktails">Non-Alcohol Cocktails</option>
+                    <option value="Drinks">Drinks</option>
+                    <option value="Fresh juices">Fresh juices</option>
+                    <option value="Energy drink">Energy drink</option>
+                    <option value="Coffee">Coffee</option>
+                    <option value="Tea">Tea</option>
+                    <option value="Special Offer">Special Offer</option>
+                    <option value="Cigarettes">Cigarettes</option>
+                    <option value="Cigars">Cigars</option>
+                </select>
+            </div>
+        </div>
+        <div class="animate_1" ng-show="dish_type=='launch'">
+            <div class="col-xs-offset-2">
+                <select ng-model="dish_category">
+                    <option value="ланч">Ланч</option>
+                </select>
+            </div>
+        </div>
+        <div class="animate_1" ng-show="dish_type=='branch'">
+            <div class="col-xs-offset-2">
+                <select ng-model="dish_category">
+                    <option value="бранч">Бранч</option>
+                </select>
             </div>
         </div>
         <div class="form-group">
@@ -48,8 +150,7 @@
     </form>
 
 
-
-
+    {{dish_category}}
 
 
 

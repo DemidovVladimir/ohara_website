@@ -30,6 +30,20 @@ var dishes = mongoose.Schema({
     dish_prepare:{
         type:Number,
         unique:false
+    },
+    dish_price:{
+        type:String,
+        unique:false
+    },
+    dish_weight:{
+        type:String,
+        unique:false
+    },
+    dish_type:{
+        type:String
+    },
+    dish_category:{
+        type:String
     }
 });
 exports.dishesModel = mongoose.model('dishe',dishes);
@@ -49,14 +63,46 @@ var news = mongoose.Schema({
     news_about:{
         type:String,
         unique:false
+    },
+    news_date:{
+        type:String,
+        unique:false
     }
 });
 exports.newsModel = mongoose.model('new',news);
 
 var events = mongoose.Schema({
+    event_name:{
+        type:String,
+        unique:true
+    },
     event_photo:{
+        type:[],
+        unique:false
+    },
+    event_brief:{
+        type:String
+    },
+    event_about:{
+        type:String,
+        unique:false
+    },
+    event_date:{
         type:String,
         unique:false
     }
 });
 exports.eventsModel = mongoose.model('event',events);
+
+var categories = mongoose.Schema({
+    category_tytle:{
+        type:String
+    },
+    category_photo:{
+        type:String
+    },
+    category_brief:{
+        type:String
+    }
+});
+exports.categoriesModel = mongoose.model('categori',categories);

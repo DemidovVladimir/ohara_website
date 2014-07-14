@@ -3,52 +3,7 @@
 
 <div class="content">
 
-    <!--Главный слайдер-->
-    <div id="myCarousel_1" class="carousel slide" data-ride="carousel">
-        <ol class="carousel-indicators">
-            <li data-target="#myCarousel_1" data-slide-to="0" class="active"></li>
-            <li data-target="#myCarousel_1" data-slide-to="1"></li>
-            <li data-target="#myCarousel_1" data-slide-to="2"></li>
-        </ol>
-
-        <div class="carousel-inner">
-            <div class="item active">
-                <img src="img/slide1.png" width="100%" alt="Слайд_1">
-                <div class="carousel-caption">
-                    <div class="cont">
-                        <p>Блюдо_2</p>
-                        <p>Из бананоф и агурцоф</p>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <img src="img/slide1.png" width="100%" alt="Слайд_1">
-                <div class="carousel-caption">
-                    <div class="cont">
-                        <p>Блюдо_2</p>
-                        <p>Из бананоф и агурцоф</p>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <img src="img/slide1.png" width="100%" alt="Слайд_1">
-                <div class="carousel-caption">
-                    <div class="cont">
-                        <p>Блюдо_2</p>
-                        <p>Из бананоф и агурцоф</p>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-
-        <button class="left carousel-control" href="#myCarousel_1" data-slide="prev">
-            <span class="glyphicon glyphicon-chevron-left fa fa-chevron-circle-left fa-3x"></span>
-        </button>
-        <button class="right carousel-control" href="#myCarousel_1" data-slide="next">
-            <span class="glyphicon glyphicon-chevron-right fa fa-chevron-circle-right fa-3x"></span>
-        </button>
-    </div>
+<main-carousel></main-carousel>
 
 
 
@@ -88,56 +43,82 @@
         <div class="thumbnails col-md-10 col-md-offset-1 col-sm-12">
             <div class="col-sm-3 col-md-3 center">
                 <div class="thumbnail">
-                    <img src="img/spoon.png" alt="Spoon">
+                    <img ng-src="img/spoon.png" alt="Spoon">
                     <div class="caption">
-                        <h3>Лучшее меню</h3>
-                        <p>Мы предлагаем отведать изысканные и вкуснейшие блюда нашей кухни приготовленными  настоящими профессионалами</p>
-                        <p class="visible-xs"><a href="#" class="btn btn-info" role="button">Читать подробнее</a></p>
+                        <a ng-href="/menu" class="noStyle">
+                            <h3>Меню</h3>
+                            <p>Мы предлагаем отведать изысканные и вкуснейшие блюда нашей кухни приготовленными  настоящими профессионалами</p>
+                            <p class="visible-xs"><a ng-href="/menu" class="btn btn-info" role="button">Читать подробнее</a></p><!--Menu link-->
+                        </a>
                     </div>
                 </div>
-                <p class="visible-sm visible-md visible-lg"><a href="#" class="btn btn-info" role="button">Читать подробнее</a></p>
             </div>
             <div class="col-sm-3 col-md-3 center">
                 <div class="thumbnail">
-                    <img src="img/vine.png" alt="Spoon">
+                    <img ng-src="img/vine.png" alt="Spoon">
                     <div class="caption">
-                        <h3>Хороший отдых</h3>
-                        <p>В нашем заведении Вы можете хорошо отдохнуть и прекрастно провести свое время в кругу близких друзей, где Вам всегда будут рады</p>
-                        <p class="visible-xs"><a href="#" class="btn btn-info" role="button">Читать подробнее</a></p>
+                        <a ng-href="/news" class="noStyle">
+                            <h3>Акции</h3>
+                            <p>В нашем заведении Вы можете хорошо отдохнуть и прекрастно провести свое время в кругу близких друзей, где Вам всегда будут рады</p>
+                            <p class="visible-xs"><a ng-href="/news" class="btn btn-info" role="button">Читать подробнее</a></p>
+                        </a>
                     </div>
                 </div>
-                <p class="visible-sm visible-md visible-lg"><a href="#" class="btn btn-info" role="button">Читать подробнее</a></p>
             </div>
             <div class="col-sm-3 col-md-3 center">
                 <div class="thumbnail">
-                    <img src="img/beer.png" alt="Spoon">
+                    <img ng-src="img/beer.png" alt="Spoon">
                     <div class="caption">
-                        <h3>Пивоварня</h3>
-                        <p>Мы готовим пиво в собственной пивоварне согласно лучшим традициям и рецептам  знаменитой пивоварни братьев O’Hara</p>
-                        <p class="visible-xs"><a href="#" class="btn btn-info" role="button">Читать подробнее</a></p>
+                        <a ng-href="/brewery" class="noStyle">
+                            <h3>Пивоварня</h3>
+                            <p>Мы готовим пиво в собственной пивоварне согласно лучшим традициям и рецептам  знаменитой пивоварни братьев O’Hara</p>
+                            <p class="visible-xs"><a ng-href="/brewery" class="btn btn-info" role="button">Читать подробнее</a></p>
+                        </a>
                     </div>
                 </div>
-                <p class="visible-sm visible-md visible-lg"><a href="#" class="btn btn-info" role="button">Читать подробнее</a></p>
             </div>
             <div class="col-sm-3 col-md-3 center">
                 <div class="thumbnail">
-                    <img src="img/hat.png" alt="Spoon">
+                    <img ng-src="img/hat.png" alt="Spoon">
                     <div class="caption">
-                        <h3>Шеф-повар</h3>
-                        <p>Вы можете отведать изысканные блюда от нашего Московского Шеф-повара, который поможет Вам окунуться в феерию настоящего</p>
-                        <p class="visible-xs"><a href="#" class="btn btn-info" role="button">Читать подробнее</a></p>
+                        <a ng-href="/delivery" class="noStyle">
+                            <h3>Доставка</h3>
+                            <p>Мы осуществляем доставку блюд из основного меню, а так же Ланчи и Пиво, сваренного на пивоварне O'Hara Irish Pub & Brewery. Доставка работает: вк-чт с 12:00 до 01:00
+                                пт-сб с 12:00 до 04:00</p>
+                            <p class="visible-xs"><a ng-href="/delivery" class="btn btn-info" role="button">Читать подробнее</a></p>
+                        </a>
                     </div>
                 </div>
-                <p class="visible-sm visible-md visible-lg"><a href="#" class="btn btn-info" role="button">Читать подробнее</a></p>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="btnThumbs visible-sm visible-md visible-lg">
+        <div class="thumbnails col-md-10 col-md-offset-1 col-sm-12">
+            <div class="col-sm-3 col-md-3 center">
+                <p class="visible-sm visible-md visible-lg"><a ng-href="/menu" class="btn btn-info" role="button">Читать подробнее</a></p>
+            </div>
+            <div class="col-sm-3 col-md-3 center">
+                <p class="visible-sm visible-md visible-lg"><a ng-href="/news" class="btn btn-info" role="button">Читать подробнее</a></p>
+            </div>
+            <div class="col-sm-3 col-md-3 center">
+                <p class="visible-sm visible-md visible-lg"><a ng-href="/brewery" class="btn btn-info" role="button">Читать подробнее</a></p>
+            </div>
+            <div class="col-sm-3 col-md-3 center">
+                <p class="visible-sm visible-md visible-lg"><a ng-href="/delivery" class="btn btn-info" role="button">Читать подробнее</a></p>
             </div>
         </div>
     </div>
 
 
 
+
+
+
     <!--Кружки после статей(зеленые)-->
     <div class="greenDots firstDots visible-sm visible-md visible-lg">
-        <img src="img/greenDots.png">
+        <img ng-src="img/greenDots.png">
     </div>
 
 
@@ -146,10 +127,10 @@
 
     <!--Наше меню-->
     <div class="ourMenu firstMenu">
-        <h2>Наше Меню</h2>
+        <h2>РЕКОМЕНДАЦИИ ШЕФ-Повара</h2>
         <div class="lines">
             <div class="prevSlideSecondSlider">
-                <a href="#" onclick="clickLeftSecond(event)" class="fa fa-chevron-circle-left fa-2x"></a>
+                <button type="button" ng-click="clickLeftSecond()" class="fa fa-chevron-circle-left fa-2x"></button>
             </div>
             <div id="leftLine">
             </div>
@@ -157,7 +138,7 @@
             <div id="rightLine">
             </div>
             <div class="nextSlideSecondSlider">
-                <a href="#" onclick="clickRightSecond(event)" class="fa fa-chevron-circle-right fa-2x"></a>
+                <button type="button" ng-click="clickRightSecond()" class="fa fa-chevron-circle-right fa-2x"></button>
             </div>
         </div>
         <p>ХОСПЕР</p>
@@ -168,15 +149,10 @@
 
 
 
-    <!--Управление слайдером-->
-    <div class="minimized">
-        <div class="prevSlideSecondSlider" style="clear: both">
-            <a href="#" onclick="clickLeftSecond(event)" class="fa fa-chevron-circle-left fa-2x"></a>
-        </div>
-        <div class="nextSlideSecondSlider" style="clear: both">
-            <a href="#" onclick="clickRightSecond(event)" class="fa fa-chevron-circle-right fa-2x"></a>
-        </div>
-    </div>
+
+
+
+
 
 
     <!--Второй слайдер-->
@@ -185,16 +161,22 @@
             <div class="carousel-inner col-md-10 col-md-offset-1">
                 <div class="item active">
                     <div data-ng-repeat="pic in active" class="col-md-2 col-sm-3 col-xs-12">
-                        <a href="{{pic.pic}}" data-lightbox="secondSlider">
+                        <!--<a href="{{pic.pic}}" data-lightbox="secondSlider">
                             <img src="{{pic.mini}}" class="img-responsive center-block img-polaroid img-thumbnail">
-                        </a>
+                        </a>-->
+                        <div class="dishHeadLink">
+                            <a ng-href="/viewDish/{{pic.title}}"><h3>{{pic.title}}</h3></a>
+                        </div>
                     </div>
                 </div>
                 <div class="item" data-ng-repeat="ipics in itemsSingle">
                     <div data-ng-repeat="pic in ipics" class="col-md-2 col-sm-3 col-xs-12">
-                        <a href="{{pic.pic}}" data-lightbox="secondSlider">
+                        <!--<a href="{{pic.pic}}" data-lightbox="secondSlider">
                             <img src="{{pic.mini}}" class="img-responsive center-block img-polaroid img-thumbnail">
-                        </a>
+                        </a>-->
+                        <div class="dishHeadLink">
+                            <a ng-href="/viewDish/{{pic.title}}"><h3>{{pic.title}}</h3></a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -209,13 +191,17 @@
     <!--Второй слайдер-->
 
     <!--Если размеры для телефона-->
-    <div class="thumbnails slider2 col-md-10 col-md-offset-1 col-sm-12 visible-xs">
-        <div class="col-sm-3 col-md-3 center">
-            <div class="thumbnail" data-ng-repeat="data in info">
-                <div data-ng-repeat="pic in data.dish_photo">
+    <div class="thumbnails slider2 visible-xs">
+        <div class="col-xs-12 center">
+            <div class="slide col-xs-12" data-ng-repeat="data in info">
+                <!--<div data-ng-repeat="pic in data">
                     <a href="/uploaded/{{pic}}" data-lightbox="repo">
-                        <img src="/uploaded/mini_{{pic}}" alt="{{data.dish_name}}">
+                        <img class="col-xs-6 col-xs-offset-3 img-responsive img-thumbnail" src="/uploaded/mini_{{pic}}" alt="{{data.dish_name}}">
                     </a>
+
+                </div>-->
+                <div class="dishHeadLink">
+                    <a ng-href="/viewDish/{{data.dish_name}}"><h3>{{data.dish_name}}</h3></a>
                 </div>
             </div>
         </div>
@@ -226,10 +212,9 @@
 
 
 
-
     <!--Кружки после второго слайдера(зеленые)-->
     <div class="greenDots secondDots visible-sm visible-md visible-lg">
-        <img src="img/greenDots.png">
+        <img ng-src="img/greenDots.png">
     </div>
 
 
@@ -239,11 +224,11 @@
 
 
     <!--Последние события-->
-    <div class="ourMenu">
-        <h2>Мероприятия</h2>
+    <div class="ourMenu eventsSlide">
+        <h2>ГАЛЕРЕЯ</h2>
         <div class="lines">
             <div class="prevSlideThirdSlider">
-                <a href="#" onclick="clickLeftThird(event)" class="fa fa-chevron-circle-left fa-2x"></a>
+                <button type="button" href="#" ng-click="clickLeftThird()" class="fa fa-chevron-circle-left fa-2x"></button>
             </div>
             <div id="leftLine">
             </div>
@@ -251,7 +236,7 @@
             <div id="rightLine">
             </div>
             <div class="nextSlideThirdSlider">
-                <a href="#" onclick="clickRightThird(event)" class="fa fa-chevron-circle-right fa-2x"></a>
+                <button type="button" href="#" ng-click="clickRightThird()" class="fa fa-chevron-circle-right fa-2x"></button>
             </div>
         </div>
         <p>ПОСЛЕДНИЕ СОБЫТИЯ</p>
@@ -263,44 +248,22 @@
 
 
 
-    <!--Управление третьим слайдером-->
-    <div class="minimizedThird">
-        <div class="prevSlideThirdSlider" style="clear: both">
-            <a href="#" onclick="clickLeftThird(event)" class="fa fa-chevron-circle-left fa-3x"></a>
-        </div>
-        <div class="nextSlideThirdSlider" style="clear: both">
-            <a href="#" onclick="clickRightThird(event)" class="fa fa-chevron-circle-right fa-3x"></a>
-        </div>
-    </div>
-
-
-
-{{activeEvents}}
-
-    <hr>
-
-    {{singleEvents}}
-
-
-
-
-
     <!--Третий слайдер-->
-    
-    <div class="col-md-12 col-sm-12">
+
+    <div class="col-md-12 col-sm-12 visible-sm visible-md visible-lg">
         <div class="carousel slide col-md-10 col-md-offset-1" data-ride="carousel" data-type="multi" data-interval="5000" id="myCarousel_3">
             <div class="carousel-inner" style="text-align: center">
                 <div class="item active">
                     <div data-ng-repeat="pic in activeEvents" class="col-sm-6 col-md-4 col-xs-12">
-                        <a href="{{pic.pic}}" data-lightbox="thirdSlider">
-                            <img src="{{pic.mini}}" class="img-responsive center-block img-polaroid img-thumbnail">
+                        <a ng-href="{{pic.pic}}" data-lightbox="thirdSlider">
+                            <img ng-src="{{pic.pic}}" class="img-responsive center-block img-polaroid img-thumbnail">
                         </a>
                     </div>
                 </div>
                 <div class="item" data-ng-repeat="ipics in singleEvents">
                     <div data-ng-repeat="pic in ipics" class="col-sm-6 col-md-4 col-xs-12">
-                        <a href="{{pic.pic}}" data-lightbox="thirdSlider">
-                            <img src="{{pic.mini}}" class="img-responsive center-block img-polaroid img-thumbnail">
+                        <a ng-href="{{pic.pic}}" data-lightbox="thirdSlider">
+                            <img ng-src="{{pic.pic}}" class="img-responsive center-block img-polaroid img-thumbnail">
                         </a>
                     </div>
                 </div>
@@ -314,191 +277,16 @@
         </div>
     </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <!--Футер-->
-    <footer>
-        <div class="lineFooter">
-        </div>
-        <div class="contentFooter gradHorFooter">
-            <div class="container">
-                <div class="aboutUs col-md-4">
-                    <a href="#">
-                        <h4>О НАС</h4>
+    <!--Если размеры для телефона-->
+    <div class="slider3 visible-xs">
+        <div class="col-xs-12 center">
+            <div class="slide col-xs-12" data-ng-repeat="pic in totalEvents">
+                    <a ng-href="{{pic.photo}}" data-lightbox="repo">
+                        <img class="col-xs-6 col-xs-offset-3 img-responsive img-thumbnail" ng-src="{{pic.photo}}">
                     </a>
-                    <pre>
-    В 1996 году был основан сравнительно молодой, но успешный пивоваренный завод "O’HARA’S Cаrlow Brewing Compаny", который занимался производством исключительно качественного ирландского Эля и Стаута. Во всем мире он славится своим принципиально-бережным отношением к традициям пивоварения, что послужило причиной отказа от идеи расширения производства. Пиво варилось и варится по сей день в не большом количестве, но исключительном качестве.  Вот  и мы, создали небольшой пивоваренный завод «O’hara» в городе Астана, для того, что бы подарить настоящим ценителям принципиально качественный продукт, ну и конечно же, подарить возможность окунуться в привычную, ирландскую атмосферу тем, кто оказался в Казахстане.
-                    </pre>
-                </div>
-                <div class="ourNavigation col-md-1">
-                    <a href="#">
-                        <h4>НАВИГАЦИЯ</h4>
-                    </a>
-                    <a href="#" id="downHome">
-                        <h5>ДОМОЙ</h5>
-                    </a>
-                    <a href="#">
-                        <h5>О НАС</h5>
-                    </a>
-                    <a href="#">
-                        <h5>ПИВОВАРНЯ</h5>
-                    </a>
-                    <a href="#/menu">
-                        <h5>МЕНЮ</h5>
-                    </a>
-                    <a href="#">
-                        <h5>ГАЛЕРЕЯ</h5>
-                    </a>
-                    <a href="#">
-                        <h5>КОНТАКТЫ</h5>
-                    </a>
-                </div>
-                <div class="tableOrder col-md-3 col-sm-6 col-md-offset-1">
-                    <a href="#">
-                        <h4>ЗАКАЗ СТОЛИКОВ</h4>
-                    </a>
-                    <pre>
-    Количество людей за столом может варьироваться. Мы можем адаптироваться к каждому заказу и составлять столы как пожелают гости.
-                    </pre>
-                    <div class="col-md-3 col-sm-3">
-                        <a href="#">
-                            <i class="fa fa-vk fa-2x"></i>
-                        </a>
-                    </div>
-                    <div class="col-md-3 col-sm-3">
-                        <a href="#">
-                            <i class="fa fa-twitter fa-2x"></i>
-                        </a>
-                    </div>
-                    <div class="col-md-3 col-sm-3">
-                        <a href="#">
-                            <i class="fa fa-facebook fa-2x"></i>
-                        </a>
-                    </div>
-                    <div class="col-md-3 col-sm-3">
-                        <a href="#">
-                            <i class="fa fa-youtube fa-2x"></i>
-                        </a>
-                    </div>
-                </div>
-                <address class="contacts col-md-3 col-sm-6 col-xs-12">
-                    <a>
-                        <h4>КОНТАКТЫ</h4>
-                    </a>
-                    <div class="row">
-                        <div class="col-md-3 col-sm-3 col-sm-offset-0 col-xs-3 col-xs-offset-1">
-                            <img src="img/marker.png" width="13px" height="19px">
-                        </div>
-                        <div class="col-md-9 col-sm-9 col-xs-8">
-                            <p>
-                                Республика Казахстан Астана, 010000   Желтоксан 2/2 ЖК "Гранд Алатау"
-                            </p>
-                        </div>
-                    </div>
-                    <div class="row phone">
-                        <div class="col-md-3 col-sm-3 col-sm-offset-0 col-xs-3 col-xs-offset-1">
-                            <img src="img/phone.png" width="12px" height="19px">
-                        </div>
-                        <div class="col-md-9 col-sm-9 col-xs-8">
-                            <p>
-                                8 (7172) 570 888
-                            </p>
-                        </div>
-                    </div>
-                    <div class="row cell_phone ">
-                        <div class="col-md-3 col-sm-3 col-sm-offset-0 col-xs-3 col-xs-offset-1">
-                            <img src="img/cell_phone.png" width="8px" height="19px">
-                        </div>
-                        <div class="col-md-9 col-sm-9 col-xs-8">
-                            <p>
-                                8 707 570 888 38
-                            </p>
-                        </div>
-                    </div>
-                </address>
-
-
-
-
-
             </div>
         </div>
-        <div class="lineBeneath"></div>
-    </footer>
-
-
-</div>
-
-
-
-<script type="text/javascript">
-
-
-
-            $(document).ready(function(){
-
-
-
-                $('#myCarousel_3 .item').each(function(){
-                    var next = $(this).next();
-                    if (!next.length) {
-                        next = $(this).siblings(':first');
-                    }
-                    next.children(':first-child').clone().appendTo($(this));
-                    for (var i=0;i<1;i++) {
-                        next=next.next();
-                        if (!next.length) {
-                            next = $(this).siblings(':first');
-                        }
-                        next.children(':first-child').clone().appendTo($(this));
-                    }
-                });
-            });
-
-
-    function clickLeftSecond(event){
-        event.preventDefault();
-        $('#myCarousel_2 .left').trigger('click');
-    }
-
-    function clickRightSecond(event){
-        event.preventDefault();
-        $('#myCarousel_2 .right').trigger('click');
-    }
-
-    function clickLeftThird(event){
-        event.preventDefault();
-        $('#myCarousel_3 .left').trigger('click');
-    }
-
-    function clickRightThird(event){
-        event.preventDefault();
-        $('#myCarousel_3 .right').trigger('click');
-    }
+    </div>
 
 
 
@@ -511,89 +299,9 @@
 
 
 
-    function equalHeight(el,plus) {
-        var tallest = 0;
-        el.each(function() {
-            var thisHeight = $(this).height();
-            if(thisHeight > tallest) {
-                tallest = thisHeight+plus;
-            }
-        });
-        el.each(function() { $(this).height(tallest); });
-    }
 
 
 
 
 
-
-
-
-    var rtime = new Date(1, 1, 2000, 12,00,00);
-    var hg = 0;
-    var timeout = false;
-    var delta = 200;
-    $(window).resize(function() {
-        $('.thumbnail').each(function(){
-            $(this).height('auto');
-        });
-        rtime = new Date();
-        if (timeout === false) {
-            timeout = true;
-            setTimeout(resizeend, delta);
-        }
-    });
-
-    function resizeend() {
-        if (new Date() - rtime < delta) {
-            setTimeout(resizeend, delta);
-        } else {
-            timeout = false;
-            var thumb = $('.thumbnail');
-            hg = Math.max($(thumb).height());
-            $('.thumbnail').each(function(){
-                $(this).height(hg);
-            });
-        }
-    }
-
-
-
-
-
-
-
-
-
-
-    $('.content').ready(function(){
-
-
-
-
-        var is_chrome = navigator.userAgent.indexOf('Chrome') > -1;
-        var is_safari = navigator.userAgent.indexOf("Safari") > -1;
-        if(is_chrome===false && is_safari===true){
-            equalHeight($('.thumbnail'),90);
-        }else{
-            equalHeight($('.thumbnail'),70);
-        }
-
-
-
-
-
-        $('.collapse li').mouseover(function(){
-            $(this).addClass('gradientMenu');
-        });
-        $('.collapse li').mouseout(function(){
-            $(this).removeClass('gradientMenu');
-        });
-
-
-
-
-    });
-
-</script>
 

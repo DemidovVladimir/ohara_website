@@ -10,7 +10,6 @@ var api = require('./api/index');
 
 
 var app = express();
-
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 
@@ -24,6 +23,11 @@ app.use(session({
 }));
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(app.router);
+app.use(function(req, res, next) {
+    // Use res.sendfile, as it streams instead of reading the file into memory.
+    res.sendfile('index.html');
+});
+
 
 
 
@@ -37,28 +41,44 @@ app.post('/addDish',api.addDish);
 app.post('/addNews',api.addNews);
 app.post('/addDishPhoto',api.addDishPhoto);
 app.post('/addNewsPhoto',api.addNewsPhoto);
+app.post('/addEventPhoto',api.addEventPhoto);
+app.post('/addCategoryPhoto',api.addCategoryPhoto);
 app.post('/postDishOutOfFile',api.postOutOfFile);
 app.post('/postDishDataOutOfFile',api.postDishDataOutOfFile);
 app.post('/postNewsDataOutOfFile',api.postNewsDataOutOfFile);
+app.post('/postEventDataOutOfFile',api.postEventDataOutOfFile);
 app.post('/postNewsOutOfFile',api.postNewsOutOfFile);
+app.post('/postEventOutOfFile',api.postEventOutOfFile);
 app.post('/addEvent',api.addEvent);
-
+app.post('/sendEmail',api.sendEmail);
+app.post('/postCategoryDataOutOfFile',api.postCategoryDataOutOfFile);
 
 app.get('/getMenuTotal',api.getMenuTotal);
+
+app.get('/getHosperTotal',api.getHosperTotal);
+app.get('/getMenuByCat/:category',api.getMenuByCat);
+app.get('/getCategoriesTotal',api.getCategoriesTotal);
+app.get('/getCategoriesInfo',api.getCategoriesInfo);
+app.get('/getBarTotal',api.getBarTotal);
+app.get('/getFoodTotal',api.getFoodTotal);
+app.get('/getNewsTotal',api.getNewsTotal);
 app.get('/getDishInfo/:dish',api.getDishInfo);
 app.get('/getNewsInfo/:news',api.getNewsInfo);
+app.get('/getEventInfo/:event',api.getEventInfo);
 app.get('/deletePicture/:dish/:pic',api.deletePicture);
 app.get('/deleteNewsPicture/:news/:pic',api.deleteNewsPicture);
+app.get('/deleteEventPicture/:event/:pic',api.deleteEventPicture);
 app.get('/deleteDishTotal/:dish',api.deleteDishTotal);
 app.get('/deleteNewsTotal/:news',api.deleteNewsTotal);
 app.get('/getNewsTotal',api.getNewsTotal);
-app.get('/deleteEventTotal/:photo',api.deleteEventTotal);
+app.get('/deleteEventTotal/:event',api.deleteEventTotal);
 app.get('/getEventsTotal',api.getEventsTotal);
+app.get('/getBearMenuTotal',api.getBearMenuTotal);
+app.get('/getLaunchMenuTotal',api.getLaunchMenuTotal);
+app.get('/getBranchMenuTotal',api.getBranchMenuTotal);
+app.get('/photosVk',api.photosVk);
 
 
-app.get('*',function(req,res){
-    res.sendfile('index.html');
-});
 /*
 app.post('/adminPanel',api.tryToLog);
 app.get('/adminPanel',function(req,res){
@@ -93,4 +113,4 @@ app.use(function(err, req, res, next) {
 });
 
 module.exports = app;
-app.listen(4321);
+app.listen(80);

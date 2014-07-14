@@ -12,7 +12,43 @@ app
  * The ng-thumb directive
  * @author: nerv
  * @version: 0.1.2, 2014-01-09
+ *
+ *
  */
+
+    .directive('mainCarousel',function(){
+        return {
+            restrict: 'E',
+            transclude: true,
+            scope: {},
+            link:function($scope,$element){
+                $element.swiperight(function() {
+                    $('#myCarousel_1 .left').trigger('click');
+                });
+                $element.swipeleft(function(){
+                    $('#myCarousel_1 .right').trigger('click');
+                });
+            },
+            templateUrl: 'parts/mainCarousel.html'
+        };
+    })
+    .directive('mainCarouselSecond',function(){
+        return {
+            restrict: 'E',
+            transclude: true,
+            scope: {},
+            link:function($scope,$element){
+                $element.swiperight(function() {
+                    $('#myCarousel_4 .left').trigger('click');
+                });
+                $element.swipeleft(function(){
+                    $('#myCarousel_4 .right').trigger('click');
+                });
+            },
+            templateUrl: 'parts/mainCarouselSecond.html'
+        };
+    })
+
     .directive('ngThumb', ['$window', function($window) {
         var helper = {
             support: !!($window.FileReader && $window.CanvasRenderingContext2D),

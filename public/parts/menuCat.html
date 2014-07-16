@@ -69,12 +69,12 @@
 
                 <div class="item active">
                     <div data-ng-repeat="pic in active" class="col-md-2 col-sm-3 col-xs-12">
-                        <div><a href="/viewDish/{{pic.title}}" class="btn btn-info" role="button">Читать подробнее</a></div>
+                        <div><a href="/viewDish{{pic.title}}" class="btn btn-info" role="button">Читать подробнее</a></div>
                     </div>
                 </div>
                 <div class="item" data-ng-repeat="ipics in itemsSingle">
                     <div data-ng-repeat="pic in ipics" class="col-md-2 col-sm-3 col-xs-12">
-                        <div><a href="/viewDish/{{pic.title}}" class="btn btn-info" role="button">Читать подробнее</a></div>
+                        <div><a href="/viewDish{{pic.title}}" class="btn btn-info" role="button">Читать подробнее</a></div>
                     </div>
                 </div>
 
@@ -101,7 +101,7 @@
                     <h3>{{data.dish_name}}</h3>
                     <p>{{data.dish_brief}}</p>
                 </div>
-                <p><a href="/viewDish/{{data.dish_name}}" class="btn btn-info" role="button">Читать подробнее</a></p>
+                <p><a href="/viewDish{{data.dish_name}}" class="btn btn-info" role="button">Читать подробнее</a></p>
             </div>
         </div>
     </div>

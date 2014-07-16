@@ -5,7 +5,6 @@ var app = angular.module('myApp',['ngRoute','ngResource','angularFileUpload','go
     app.config(function($routeProvider,$locationProvider)
     {
         $locationProvider.html5Mode(true);
-        $locationProvider.hashPrefix('!');
         // Register routes with the $routeProvider
         $routeProvider
             .when('/', {
@@ -28,23 +27,23 @@ var app = angular.module('myApp',['ngRoute','ngResource','angularFileUpload','go
                 templateUrl:'parts/menu.html',
                 controller:'allMenu'
             })
-            .when('/menu/bar',{
+            .when('/menubar',{
                 templateUrl:'parts/bar.html',
                 controller:'bar'
             })
-            .when('/menu/food',{
+            .when('/menufood',{
                 templateUrl:'parts/food.html',
                 controller:'food'
             })
-            .when('/menu/bear',{
+            .when('/menubear',{
                 templateUrl:'parts/bear.html',
                 controller:'bear'
             })
-            .when('/menu/launch',{
+            .when('/menulaunch',{
                 templateUrl:'parts/launch.html',
                 controller:'launch'
             })
-            .when('/menu/branch',{
+            .when('/menubranch',{
                 templateUrl:'parts/branch.html',
                 controller:'branch'
             })
@@ -52,7 +51,7 @@ var app = angular.module('myApp',['ngRoute','ngResource','angularFileUpload','go
                 templateUrl:"parts/add_menu.html",
                 controller:'addMenu'
             })
-            .when('/menuAdmin/:dish', {
+            .when('/menuAdmin:dish', {
                 templateUrl:"/parts/maintain_dish.html",
                 controller:'oneDish'
             })
@@ -64,7 +63,7 @@ var app = angular.module('myApp',['ngRoute','ngResource','angularFileUpload','go
                 templateUrl:"/parts/add_news.html",
                 controller:'addNews'
             })
-            .when('/newsAdmin/:news', {
+            .when('/newsAdmin:news', {
                 templateUrl:"/parts/maintain_news.html",
                 controller:'oneNews'
             })
@@ -72,11 +71,11 @@ var app = angular.module('myApp',['ngRoute','ngResource','angularFileUpload','go
                 templateUrl:"/parts/add_event.html",
                 controller:'addEvent'
             })
-            .when('/eventsAdmin/:event', {
+            .when('/eventsAdmin:event', {
                 templateUrl:"/parts/maintain_event.html",
                 controller:'oneEvent'
             })
-            .when('/viewDish/:dish', {
+            .when('/viewDish:dish', {
                 templateUrl:"/parts/veiwDish.html",
                 controller:'viewDish'
             })
@@ -84,7 +83,7 @@ var app = angular.module('myApp',['ngRoute','ngResource','angularFileUpload','go
                 templateUrl:"/parts/news.html",
                 controller:'news'
             })
-            .when('/news/:news', {
+            .when('/news:news', {
                 templateUrl:"/parts/viewNews.html",
                 controller:'viewNews'
             })
@@ -92,7 +91,7 @@ var app = angular.module('myApp',['ngRoute','ngResource','angularFileUpload','go
                 templateUrl:"/parts/events.html",
                 controller:'events'
             })
-            .when('/events/:event', {
+            .when('/events:event', {
                 templateUrl:"/parts/viewEvent.html",
                 controller:'viewEvent'
             })
@@ -100,7 +99,7 @@ var app = angular.module('myApp',['ngRoute','ngResource','angularFileUpload','go
                 templateUrl:"/parts/contacts.html",
                 controller:'contacts'
             })
-            .when('/menu/byCat/:category', {
+            .when('/menubyCat:category', {
                 templateUrl:"/parts/menuCat.html",
                 controller:'menuCat'
             })

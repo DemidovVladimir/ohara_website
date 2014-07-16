@@ -127,7 +127,7 @@
 
     <!--Наше меню-->
     <div class="ourMenu firstMenu">
-        <h2>РЕКОМЕНДАЦИИ ШЕФ-Повара</h2>
+        <h2>Рекомендации ШЕФ-Повара</h2>
         <div class="lines">
             <div class="prevSlideSecondSlider">
                 <button type="button" ng-click="clickLeftSecond()" class="fa fa-chevron-circle-left fa-2x"></button>
@@ -165,7 +165,7 @@
                             <img src="{{pic.mini}}" class="img-responsive center-block img-polaroid img-thumbnail">
                         </a>-->
                         <div class="dishHeadLink">
-                            <a ng-href="/viewDish/{{pic.title}}"><h3>{{pic.title}}</h3></a>
+                            <a ng-href="/viewDish{{pic.title}}"><h3>{{pic.title}}</h3></a>
                         </div>
                     </div>
                 </div>
@@ -175,7 +175,7 @@
                             <img src="{{pic.mini}}" class="img-responsive center-block img-polaroid img-thumbnail">
                         </a>-->
                         <div class="dishHeadLink">
-                            <a ng-href="/viewDish/{{pic.title}}"><h3>{{pic.title}}</h3></a>
+                            <a ng-href="/viewDish{{pic.title}}"><h3>{{pic.title}}</h3></a>
                         </div>
                     </div>
                 </div>
@@ -201,7 +201,7 @@
 
                 </div>-->
                 <div class="dishHeadLink">
-                    <a ng-href="/viewDish/{{data.dish_name}}"><h3>{{data.dish_name}}</h3></a>
+                    <a ng-href="/viewDish{{data.dish_name}}"><h3>{{data.dish_name}}</h3></a>
                 </div>
             </div>
         </div>

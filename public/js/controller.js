@@ -578,7 +578,7 @@ app.controller('menuCat',function($scope,$resource,$document,$window,$routeParam
 
 
 app.controller('addMenu', function ($scope, $fileUploader,$resource,$route, $location) {
-    $scope.path = 'http://oharapub.kz/menuAdmin/';// Путь который контролит данный обработчик--------------------------------------
+    $scope.path = 'http://oharapub.kz/menuAdmin';// Путь который контролит данный обработчик--------------------------------------
 
 
     $scope.deleteTotalDish = function(dish){
@@ -873,7 +873,7 @@ app.controller('oneDish', function ($scope,$fileUploader,$routeParams,$resource,
 
 
 app.controller('addNews',function($scope,$fileUploader,$routeParams,$resource,$route,$location){
-    $scope.path = 'http://oharapub.kz/newsAdmin/';// Путь который контролит данный обработчик--------------------------------------
+    $scope.path = 'http://oharapub.kz/newsAdmin';// Путь который контролит данный обработчик--------------------------------------
 
 
     $scope.deleteTotalNews = function(news){
@@ -1008,7 +1008,7 @@ app.controller('addNews',function($scope,$fileUploader,$routeParams,$resource,$r
 
 
 app.controller('addEvent',function($scope,$fileUploader,$routeParams,$resource,$route,$location){
-    $scope.path = 'http://oharapub.kz/eventsAdmin/';// Путь который контролит данный обработчик--------------------------------------
+    $scope.path = 'http://oharapub.kz/eventsAdmin';// Путь который контролит данный обработчик--------------------------------------
 
 
     $scope.deleteTotalEvent = function(event){

@@ -33,7 +33,7 @@
                                 </div>
                                 <div class="newsBrief col-sm-6">
                                     <pre>{{pic.brief}}</pre>
-                                    <a href="#news/{{pic.title}}" class="btn btn-info btn-xs">Читать далее</a>
+                                    <a href="#news{{pic.title}}" class="btn btn-info btn-xs">Читать далее</a>
                                 </div>
                             </div>
                         </div>
@@ -60,7 +60,7 @@
                             </div>
                             <div class="newsBrief">
                                 <pre>{{pic.brief}}</pre>
-                                <a href="#news/{{pic.title}}" class="btn btn-info btn-xs">Читать далее</a>
+                                <a href="news{{pic.title}}" class="btn btn-info btn-xs">Читать далее</a>
                             </div>
                         </div>
                     </div>
@@ -87,7 +87,7 @@
                     <img class="col-xs-6 col-xs-offset-3 img-responsive img-thumbnail" src="/uploaded/mini_{{data.news_photo[0]}}" alt="{{data.news_name}}">
                 </a>
                 <p>{{data.news_brief}}</p>
-                <a href="#news/{{data.news_name}}" class="col-xs-6 col-xs-offset-3 clearFloat btn btn-info btn-md k_myriad_italic">Читать далее</a>
+                <a href="news{{data.news_name}}" class="col-xs-6 col-xs-offset-3 clearFloat btn btn-info btn-md k_myriad_italic">Читать далее</a>
         </div>
     </div>
 </div>

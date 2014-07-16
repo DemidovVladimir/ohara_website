@@ -4,10 +4,10 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>First Page Render</title>
-<link href="lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
 <link href='http://fonts.googleapis.com/css?family=Lobster&subset=cyrillic-ext,latin' rel='stylesheet' type='text/css'>
-<link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-<link href="lib/lightbox/css/lightbox.css" rel="stylesheet">
+<link href="/lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+<link href="/lib/lightbox/css/lightbox.css" rel="stylesheet">
 <style type="text/css" rel="slylesheet">
 /*Declaring fonts*/
 @font-face {
@@ -65,7 +65,7 @@ html, body {
 }
 body{
     font-family: "HelveticaNeueCyr";
-    background-image: url('img/back.jpg');
+    background-image: url('/img/back.jpg');
 }
 body pre{
     font-family: "HelveticaNeueCyr";
@@ -1471,24 +1471,37 @@ input[type='file'] {
 .ui-loader{
     display:none;
 }
+#myCarousel_2 a{
+    color:rgba(102, 153, 26, 1);
+}
+#bearFest{
+    background-color: rgba(255,255,255,0);
+    border-style: hidden;
+}
+#myCarousel_11 img{
+    height:112px;
+}
+#myCarousel_3 img{
+    height:190px;
+}
 </style>
-<script type="text/javascript" src="lib/jquery/dist/jquery.min.js"></script>
-<script type="text/javascript" src="lib/jqmobile/jquery.mobile-1.4.3.min.js"></script>
-<script type="text/javascript" src="lib/lightbox/js/lightbox.min.js"></script>
-<script type="text/javascript" src="lib/swipe/jquery.touchSwipe.min.js"></script>
-<script type="text/javascript" src="lib/bootstrap/dist/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="lib/angular/angular.js"></script>
-<script type="text/javascript" src="lib/angular-route/angular-route.min.js"></script>
-<script type="text/javascript" src="lib/angular-resource/angular-resource.min.js"></script>
-<script type="text/javascript" src="lib/angular-file-upload/angular-file-upload.min.js"></script>
-<script type="text/javascript" src="js/app.js"></script>
-<script type="text/javascript" src="js/controller.js"></script>
-<script type="text/javascript" src="js/directives.js"></script>
+<script type="text/javascript" src="../lib/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript" src="../lib/angular/angular.js"></script>
+<script type="text/javascript" src="../js/app.js"></script>
+<script type="text/javascript" src="../js/controller.js"></script>
+<script type="text/javascript" src="../js/directives.js"></script>
+<script type="text/javascript" src="../lib/jqmobile/jquery.mobile-1.4.3.min.js"></script>
+<script type="text/javascript" src="../lib/lightbox/js/lightbox.min.js"></script>
+<script type="text/javascript" src="../lib/swipe/jquery.touchSwipe.min.js"></script>
+<script type="text/javascript" src="../lib/bootstrap/dist/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../lib/angular-route/angular-route.min.js"></script>
+<script type="text/javascript" src="../lib/angular-resource/angular-resource.min.js"></script>
+<script type="text/javascript" src="../lib/angular-file-upload/angular-file-upload.min.js"></script>
 <script type="text/javascript" src='//maps.googleapis.com/maps/api/js?sensor=true'></script>
-<script type="text/javascript" src="lib/lodash/dist/lodash.min.js"></script>
-<script type="text/javascript" src="lib/angular-google-maps/dist/angular-google-maps.min.js"></script>
-<script type="text/javascript" src="lib/angular-animate/angular-animate.min.js"></script>
-<base href="/">
+<script type="text/javascript" src="../lib/lodash/dist/lodash.min.js"></script>
+<script type="text/javascript" src="../lib/angular-google-maps/dist/angular-google-maps.min.js"></script>
+<script type="text/javascript" src="../lib/angular-animate/angular-animate.min.js"></script>
+
 </head>
 <body>
 
@@ -1508,7 +1521,7 @@ input[type='file'] {
             <div class="navbar-brand">
                 <div class="circle">
                     <div class="grad">
-                        <a ng-href=""><img src="img/logo.png"></a>
+                        <a ng-href=""><img src="/img/logo.png"></a>
                     </div>
                 </div>
             </div>
@@ -1522,11 +1535,11 @@ input[type='file'] {
                             Меню <span class="caret"></span>
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a ng-href="/menu/bar">Бар</a></li>
-                            <li><a ng-href="/menu/food">Кухня</a></li>
+                            <li><a ng-href="/menubar">Бар</a></li>
+                            <li><a ng-href="/menufood">Кухня</a></li>
                             <!--<li><a href="#/menu/bear">Пивное</a></li>-->
-                            <li><a ng-href="/menu/launch">Ланч</a></li>
-                            <li><a ng-href="/menu/branch">Бранч</a></li>
+                            <li><a ng-href="/menulaunch">Ланч</a></li>
+                            <li><a ng-href="/menubranch">Бранч</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -1568,25 +1581,25 @@ input[type='file'] {
     <div class="contentFooter gradHorFooter">
         <div class="container">
             <div class="ourNavigation col-md-1 col-md-offset-1">
-                <a ng-href="">
+                <a ng-href="/">
                     <h4>НАВИГАЦИЯ</h4>
                 </a>
                 <a ng-href="/" id="downHome">
                     <h5>ДОМОЙ</h5>
                 </a>
-                <a ng-href="aboutUs">
+                <a ng-href="/aboutUs">
                     <h5>О НАС</h5>
                 </a>
-                <a ng-href="brewery">
+                <a ng-href="/brewery">
                     <h5>ПИВОВАРНЯ</h5>
                 </a>
-                <a ng-href="menu">
+                <a ng-href="/menu">
                     <h5>МЕНЮ</h5>
                 </a>
-                <a ng-href="events">
+                <a ng-href="/events">
                     <h5>ГАЛЕРЕЯ</h5>
                 </a>
-                <a ng-href="contacts">
+                <a ng-href="/contacts">
                     <h5>КОНТАКТЫ</h5>
                 </a>
             </div>
@@ -1604,7 +1617,7 @@ input[type='file'] {
                     </a>
                 </div>
                 <div class="col-md-3 col-sm-3">
-                    <a ng-href="/#/contacts">
+                    <a ng-href="/contacts">
                         <i class="fa fa-envelope fa-2x"></i>
                     </a>
                 </div>
@@ -1625,7 +1638,7 @@ input[type='file'] {
                 </a>
                 <div class="row">
                     <div class="col-md-3 col-sm-3 col-sm-offset-0 col-xs-3 col-xs-offset-1">
-                        <img src="img/marker.png" width="19px" class="img-responsive">
+                        <img src="/img/marker.png" width="19px" class="img-responsive">
                     </div>
                     <div class="col-md-9 col-sm-9 col-xs-8">
                         <p>
@@ -1635,7 +1648,7 @@ input[type='file'] {
                 </div>
                 <div class="row phone">
                     <div class="col-md-3 col-sm-3 col-sm-offset-0 col-xs-3 col-xs-offset-1">
-                        <img ng-src="img/phone.png" width="12px" height="19px">
+                        <img ng-src="/img/phone.png" width="12px" height="19px">
                     </div>
                     <div class="col-md-9 col-sm-9 col-xs-8">
                         <p>
@@ -1645,11 +1658,11 @@ input[type='file'] {
                 </div>
                 <div class="row cell_phone ">
                     <div class="col-md-3 col-sm-3 col-sm-offset-0 col-xs-3 col-xs-offset-1">
-                        <img ng-src="img/cell_phone.png" width="8px" height="19px">
+                        <img ng-src="/img/cell_phone.png" width="8px" height="19px">
                     </div>
                     <div class="col-md-9 col-sm-9 col-xs-8">
                         <p>
-                            8 707 570 888 38
+                            8 707 570 88 83
                         </p>
                     </div>
                 </div>

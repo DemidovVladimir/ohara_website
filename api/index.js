@@ -962,7 +962,7 @@ exports.postOutOfFile = function(req,res,next){
     var time = req.body.time;
     var brief = req.body.brief;
     var price = req.body.price;
-    var weight = req.body.price;
+    var weight = req.body.weight;
     var type = req.body.type;
     var category = req.body.category;
     db.dishesModel.create({dish_name:title, dish_about:about, dish_brief:brief, dish_prepare:time, dish_price:price, dish_weight:weight, dish_type:type, dish_category:category},function(err){
@@ -1497,7 +1497,7 @@ exports.sendEmail = function(req,res,next){
 
     mail({
         from: name+" ✔ "+emailAddress, // sender address
-        to: "misterfreedom@mail.ru", // list of receivers
+        to: "oharaforfriends@gmail.com", // list of receivers
         subject: theme+" ✔", // Subject line
         text: body+" ✔", // plaintext body
         html: "<b>"+body+" ✔</b>" // html body

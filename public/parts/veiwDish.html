@@ -32,7 +32,7 @@
 
 <!--Наше меню-->
 <div class="ourMenu firstMenu">
-    <h2>РЕКОМЕНДАЦИИ ШЕФ-Повара</h2>
+    <h2>Рекомендации ШЕФ-Повара</h2>
     <div class="lines">
         <div class="prevSlideSecondSlider">
             <button type="button" ng-click="clickLeftSecond()" class="fa fa-chevron-circle-left fa-2x"></button>
@@ -63,7 +63,7 @@
                     <!--<a href="{{pic.pic}}" data-lightbox="secondSlider">
                         <img src="{{pic.mini}}" class="img-responsive center-block img-polaroid img-thumbnail">
                     </a>-->
-                    <a ng-href="/viewDish/{{pic.title}}"><h3>{{pic.title}}</h3></a>
+                    <a ng-href="/viewDish{{pic.title}}"><h3>{{pic.title}}</h3></a>
                 </div>
             </div>
             <div class="item" data-ng-repeat="ipics in itemsSingle">
@@ -71,7 +71,7 @@
                     <!--<a href="{{pic.pic}}" data-lightbox="secondSlider">
                         <img src="{{pic.mini}}" class="img-responsive center-block img-polaroid img-thumbnail">
                     </a>-->
-                    <a ng-href="/viewDish/{{pic.title}}"><h3>{{pic.title}}</h3></a>
+                    <a ng-href="/viewDish{{pic.title}}"><h3>{{pic.title}}</h3></a>
                 </div>
             </div>
         </div>
@@ -94,7 +94,7 @@
                     <img class="col-xs-6 col-xs-offset-3 img-responsive img-thumbnail" src="/uploaded/mini_{{pic}}" alt="{{data.dish_name}}">
                 </a>
             </div>-->
-            <a ng-href="/viewDish/{{data.dish_name}}"><h3>{{data.dish_name}}</h3></a>
+            <a ng-href="/viewDish{{data.dish_name}}"><h3>{{data.dish_name}}</h3></a>
         </div>
     </div>
 </div>

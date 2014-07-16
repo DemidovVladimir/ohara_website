@@ -23,10 +23,7 @@ app.use(session({
 }));
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(app.router);
-app.use(function(req, res, next) {
-    // Use res.sendfile, as it streams instead of reading the file into memory.
-    res.sendfile('index.html');
-});
+
 
 
 
@@ -78,7 +75,9 @@ app.get('/getLaunchMenuTotal',api.getLaunchMenuTotal);
 app.get('/getBranchMenuTotal',api.getBranchMenuTotal);
 app.get('/photosVk',api.photosVk);
 
-
+app.get('*',function(req, res) {
+    res.sendfile('index.html');
+});
 /*
 app.post('/adminPanel',api.tryToLog);
 app.get('/adminPanel',function(req,res){
